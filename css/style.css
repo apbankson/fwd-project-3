@@ -1,0 +1,10 @@
+/* === General Styles === */
+
+* {
+    font-family: 'Merriweather', serif;
+}
+
+
+.state-default {
+    display: none;
+}
