@@ -1,10 +1,59 @@
 /* === General Styles === */
 
-* {
+html {
     font-family: 'Merriweather', serif;
+    box-sizing: border-box;
+}
+
+.tip-top {
+    text-align: center; 
+    color: white;
+    background-color: #333;
+    padding: 20px 0;
+}
+
+h2, 
+legend {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.5em;
+    margin: 20px 0; 
+}
+
+label, 
+p {
+    font-weight: 200;
+    color: #777;
+    font-size: 1rem;
+}
+
+.top-container,
+.main-container,
+.container {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex: 1;
+    width: 100%;
+    padding: 20px 20px; 
+}
+
+label {
+    display: block;
+    margin: 15px 0;
+}
+
+.inliners {
+    display: inline-block;
 }
 
 
+
+
+
+
+/* === Select Styles === */
 .state-default {
     display: none;
 }
