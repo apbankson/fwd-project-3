@@ -1,17 +1,13 @@
 /* === General Styles === */
 
-html {
+html,
+* {
     font-family: 'Merriweather', serif;
     box-sizing: border-box;
 }
 
-.tip-top {
-    text-align: center; 
-    color: white;
-    background-color: #333;
-    padding: 20px 0;
-}
 
+/* === Text styles === */
 h2, 
 legend {
     font-weight: 700;
@@ -23,37 +19,134 @@ legend {
 label, 
 p {
     font-weight: 200;
-    color: #777;
+    color: #858585;
     font-size: 1rem;
-}
-
-.top-container,
-.main-container,
-.container {
-    display: flex; 
-    flex-direction: column;
-    align-items: flex-start;
-    flex-grow: 1;
-    flex: 1;
-    width: 100%;
-    padding: 20px 20px; 
+    margin: 25px 0 15px;
 }
 
 label {
     display: block;
-    margin: 15px 0;
 }
+
+/* === Container and Display Styles === */
+
+.tip-top {
+    text-align: center; 
+    color: white;
+    background-color: #333;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.top-container {
+    text-align: center;
+}
+
+.main-container, 
+.top-container {
+    padding: 20px 30px;
+}
+
+
+#form1 {
+    width: 100%;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    background-color: #eee;
+    border-radius: 5px;
+    /* margin: 20px 15px; */
+    padding: 20px 20px;
+    width: 100%;
+    border: none;
+    font-size: 1.4rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border: solid 2px navy;
+    outline: none;
+}
+
+select {
+    box-sizing: content-box;
+    height: 68px;
+    text-indent: 5px;
+    font-weight: 100;
+}
+
+::placeholder {
+    font-style: italic;
+    text-align: right;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
 
 .inliners {
     display: inline-block;
+    margin-left: 15px;
 }
-
-
-
-
-
 
 /* === Select Styles === */
 .state-default {
     display: none;
 }
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: teal;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin: 20px 0;
+}
+
+/* === V specifics === */
+
+button + p {
+    text-align: center; 
+    font-style: italic; 
+    margin-top: 30px;
+    margin-bottom: 200px;
+}
+
+h2 + p {
+    margin-bottom: 50px;
+}
+
+
+/* === MEDIA QUERIES === */
+@media (min-width: 768px) {
+    .top-container,
+    .main-container {
+        width: 66.66%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    p label {
+        display: inline-block;
+        width: 66%;
+    }
+
+    /* input:not([type="radio"]):not([type="checkbox"]) {
+        float: right;
+        display: inline-block;
+        width: 66%;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      } */
+} 
