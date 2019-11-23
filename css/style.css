@@ -48,10 +48,23 @@ label {
     padding: 20px 30px;
 }
 
-
 #form1 {
     width: 100%;
 }
+
+hr {
+    margin: 40px auto 20px;
+}
+
+.hr-1 {
+    border-top: 5px double black;
+}
+
+.hr-2 {
+    border-top: 2px solid black;
+}
+
+/* === Input, button, and Select Styles === */
 
 input:not([type="radio"]):not([type="checkbox"]),
 select,
@@ -87,17 +100,6 @@ select {
     font-size: 1rem;
 }
 
-
-.inliners {
-    display: inline-block;
-    margin-left: 15px;
-}
-
-/* === Select Styles === */
-.state-default {
-    display: none;
-}
-
 button[type="submit"] {
     display: block;
     width: 100%;
@@ -123,30 +125,78 @@ h2 + p {
     margin-bottom: 50px;
 }
 
+.inliners {
+    display: inline-block;
+    margin-left: 15px;
+}
 
-/* === MEDIA QUERIES === */
+.state-default {
+    display: none;
+}
+
+
+/* === MEDIA QUERY === */
 @media (min-width: 768px) {
-    .top-container,
+    fieldset {
+        width: 100%;
+    }
+
+    .top-container {
+        width: 66.66%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .top-container p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .main-container {
         width: 66.66%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-container p {
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-container p.zip-graph {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    input#zip {
+        flex: 0 1 auto;
+        width: auto;
     }
 
     p label {
-        display: inline-block;
-        width: 66%;
+        flex: 0 0 33.333333%;
     }
 
-    /* input:not([type="radio"]):not([type="checkbox"]) {
-        float: right;
-        display: inline-block;
-        width: 66%;
+    input:not([type="radio"]):not([type="checkbox"]) {
+        flex: 0 0 66.6666666%;
     }
 
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-      } */
+    textarea {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .copyright {
+        display: flex;
+    }
+
+    .copyright p {
+        margin-left: auto;
+        margin-right: auto;
+        font-style: italic;
+        margin-bottom: 100px;
+    }
 } 
