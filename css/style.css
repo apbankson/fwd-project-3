@@ -81,6 +81,7 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus,
+input[type="tel"]:focus,
 select:focus {
     border: solid 2px navy;
     outline: none;
